@@ -1,10 +1,10 @@
 <template>
   <section class="mobile-page">
-    <h2 class="page-title">Mobile Troops App</h2>
+    <h2 class="page-title">Aplicacion movil de tropas</h2>
 
     <div class="mobile-layout">
       <div class="panel">
-        <h3>Tropas List</h3>
+        <h3>Lista de Tropas</h3>
         <ul class="clean-list">
           <li
             v-for="item in state.tropas"
@@ -13,25 +13,25 @@
             @click="selectItem(item)"
           >
             <strong>{{ item.tropa }}</strong>
-            <span>{{ item.cattleCount }} cattle</span>
+            <span>{{ item.cattleCount }} cabezas</span>
           </li>
         </ul>
       </div>
 
       <div class="panel">
-        <h3>Selected Tropa Detail</h3>
+        <h3>Detalle de Tropa Seleccionada</h3>
         <div v-if="selected" class="detail-grid">
-          <p><strong>Number:</strong> {{ selected.tropa }}</p>
-          <p><strong>Quantity of cattle:</strong> {{ selected.cattleCount }}</p>
-          <p><strong>Brand provider:</strong> {{ selected.brand }}</p>
-          <p><strong>Plate:</strong> {{ selected.plate }}</p>
+          <p><strong>Numero:</strong> {{ selected.tropa }}</p>
+          <p><strong>Cantidad de cabezas:</strong> {{ selected.cattleCount }}</p>
+          <p><strong>Proveedor de marca:</strong> {{ selected.brand }}</p>
+          <p><strong>Patente:</strong> {{ selected.plate }}</p>
         </div>
-        <p v-else>Select one tropa from the list.</p>
+        <p v-else>Selecciona una tropa de la lista.</p>
       </div>
     </div>
 
     <div class="panel add-panel">
-      <h3>Add Tropa</h3>
+      <h3>Agregar Tropa</h3>
       <form @submit.prevent="saveTropa" class="form-grid">
         <label>
           Tropa
@@ -39,30 +39,30 @@
         </label>
 
         <label>
-          Brand provider
-          <input v-model.trim="form.brand" required placeholder="Provider name" />
+          Proveedor de marca
+          <input v-model.trim="form.brand" required placeholder="Nombre del proveedor" />
         </label>
 
         <label>
-          Plate
+          Patente
           <input v-model.trim="form.plate" required placeholder="AA-0000" />
         </label>
 
         <div class="camera-box">
-          <p><strong>Camera count:</strong> {{ form.cattleCount ?? 'Not counted yet' }}</p>
+          <p><strong>Conteo de camara:</strong> {{ form.cattleCount ?? 'Aun sin conteo' }}</p>
           <button type="button" class="btn-secondary" @click="simulateCameraCount">
-            Call Camera to Count
+            Usar camara para contar
           </button>
         </div>
 
-        <button type="submit" class="btn-main">Add New Tropa</button>
+        <button type="submit" class="btn-main">Agregar nueva tropa</button>
       </form>
     </div>
 
     <div v-if="bigScreenValue !== null" class="big-screen">
-      <h3>Count Result</h3>
+      <h3>Resultado del conteo</h3>
       <p class="big-number">{{ bigScreenValue }}</p>
-      <span>CATTLE</span>
+      <span>CABEZAS</span>
     </div>
   </section>
 </template>

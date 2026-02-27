@@ -1,10 +1,10 @@
 <template>
   <div class="app-shell">
     <header class="top-bar">
-      <h1>Tropas Control</h1>
+      <h1>Control de Tropas</h1>
       <nav>
-        <RouterLink to="/mobile" class="nav-link">Mobile App</RouterLink>
-        <RouterLink to="/dashboard" class="nav-link">Dashboard</RouterLink>
+        <RouterLink to="/mobile" class="nav-link">App Movil</RouterLink>
+        <RouterLink to="/dashboard" class="nav-link">Tablero</RouterLink>
       </nav>
     </header>
 

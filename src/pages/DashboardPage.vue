@@ -1,34 +1,34 @@
 <template>
   <section>
-    <h2 class="page-title">Basic Dashboard</h2>
+    <h2 class="page-title">Tablero basico</h2>
 
     <div class="metrics-grid">
       <article class="metric-card">
-        <h3>Total Cattle</h3>
+        <h3>Total de cabezas</h3>
         <p class="metric-value">{{ totals.totalCattle }}</p>
       </article>
 
       <article class="metric-card">
-        <h3>Cattle Today</h3>
+        <h3>Cabezas hoy</h3>
         <p class="metric-value">{{ todayTotal }}</p>
       </article>
 
       <article class="metric-card">
-        <h3>Cattle This Month</h3>
+        <h3>Cabezas este mes</h3>
         <p class="metric-value">{{ monthTotal }}</p>
       </article>
     </div>
 
     <div class="panel">
-      <h3>All Tropas</h3>
+      <h3>Todas las tropas</h3>
       <table class="tropa-table">
         <thead>
           <tr>
             <th>Tropa</th>
-            <th>Cattle</th>
-            <th>Plate</th>
-            <th>Brand</th>
-            <th>Date</th>
+            <th>Cabezas</th>
+            <th>Patente</th>
+            <th>Marca</th>
+            <th>Fecha</th>
           </tr>
         </thead>
         <tbody>
@@ -45,7 +45,7 @@
 
     <div class="charts-grid">
       <article class="panel">
-        <h3>Cows by Day</h3>
+        <h3>Cabezas por dia</h3>
         <div class="chart-list">
           <div v-for="bar in dayBars" :key="bar.label" class="chart-row">
             <span>{{ bar.label }}</span>
@@ -58,7 +58,7 @@
       </article>
 
       <article class="panel">
-        <h3>Cows by Month</h3>
+        <h3>Cabezas por mes</h3>
         <div class="chart-list">
           <div v-for="bar in monthBars" :key="bar.label" class="chart-row">
             <span>{{ bar.label }}</span>
@@ -89,7 +89,7 @@ const toBars = (source) => {
   const entries = Object.entries(source)
 
   if (!entries.length) {
-    return [{ label: 'No data', value: 0, width: 0 }]
+    return [{ label: 'Sin datos', value: 0, width: 0 }]
   }
 
   const max = Math.max(...entries.map(([, value]) => value), 1)
