@@ -18,7 +18,7 @@
         <p class="metric-value">{{ monthTotal }}</p>
       </article>
     </div>
-
+<br>
     <div class="panel">
       <h3>Todas las tropas</h3>
       <table class="tropa-table">
@@ -42,7 +42,7 @@
         </tbody>
       </table>
     </div>
-
+<br>
     <div class="charts-grid">
       <article class="panel">
         <h3>Cabezas por dia</h3>
