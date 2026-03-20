@@ -29,6 +29,7 @@
             <th>Patente</th>
             <th>Marca</th>
             <th>Fecha</th>
+            <th class="evidence-cell">Evidencia</th>
           </tr>
         </thead>
         <tbody>
@@ -38,6 +39,32 @@
             <td>{{ item.plate }}</td>
             <td>{{ item.brand }}</td>
             <td>{{ item.createdAt }}</td>
+            <td class="evidence-cell">
+              <a
+                :href="`/mock/evidencias/${item.id}`"
+                class="evidence-link"
+                :aria-label="`Ver evidencia de ${item.tropa}`"
+                title="Ver evidencia"
+                @click.prevent
+              >
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M14 4H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9zm0 0v5h5"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="m9 15 2-2 2 2 3-3"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </td>
           </tr>
         </tbody>
       </table>

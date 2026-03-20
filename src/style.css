@@ -378,6 +378,40 @@ button:hover {
   border-bottom: none;
 }
 
+.evidence-cell {
+  width: 84px;
+  text-align: center !important;
+}
+
+.evidence-link {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.evidence-link svg {
+  width: 14px;
+  height: 14px;
+}
+
+.evidence-link:hover {
+  color: var(--accent-strong);
+  background: rgba(11, 74, 162, 0.08);
+  border-color: rgba(11, 74, 162, 0.16);
+}
+
+.evidence-link:focus-visible {
+  outline: 2px solid rgba(11, 74, 162, 0.22);
+  outline-offset: 2px;
+}
+
 .chart-list {
   display: grid;
   gap: 10px;
